@@ -1,0 +1,81 @@
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia;
+  background-color: coral;
+}
+.buttons {
+    display: flex;
+}
+.out-line {
+    margin-left: 300px;
+    margin-top: 100px;
+}
+.borders {
+    border: solid 1px green;
+    width: 372px;
+    height: 300px;
+    padding: 5px 15px 10px 0;
+    background-color: black;
+}
+.buttons {
+    margin-left: 4px;
+    
+}
+.one-4-flex, .five-8-flex, .nine-C-flex {
+    display: flex;
+}
+
+.five-8-flex, .nine-C-flex {
+    margin-top: 10px;
+}
+.casio {
+    width: 100px;
+    color: antiquewhite;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px 0 0 5px;
+}
+.blue {
+    color: aqua;
+}
+
+.buttons-container-2 {
+    margin-left: 3px;
+}
+
+.button-number-1, .button-number-2, .button-number-3, .button-number-4, .button-number-5, .button-number-6,
+.button-number-7, .button-number-8, .button-number-9, .button-number-0, .button-period, .button-number-C {
+    width: 75px;
+    height: 75px;
+    background-color: aqua;
+    margin-left: 2px;
+    border-radius: 3px;
+} 
+.button-number-1:active, .button-number-2:active, .button-number-3:active, .button-number-4:active, .button-number-5:active, .button-number-6:active,
+.button-number-7:active, .button-number-8:active, .button-number-9:active, .button-number-0:active, .button-period:active, .button-number-C:active {
+    
+    transition-duration: 5s;
+    background-color: rgb(7, 136, 136);
+} 
+
+.button-add, .button-subtract, .button-multiply, .button-divide, .button-equals {
+    width: 45px;
+    height: 45px;
+    background-color: aqua;
+    margin-left: 2px;
+    margin-top: 5px;
+    border-radius: 3px;
+}
+.button-add {
+    margin-top: 0;
+}
+
+ 
