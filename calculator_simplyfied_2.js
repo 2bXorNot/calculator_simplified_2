@@ -289,6 +289,8 @@ function subtractButton() {
             clearArr();
             c.push(totalAmount);
             console.log(Number(totalAmount.toFixed(3)));
+            //console.log(a);
+            //console.log(o);
         };
     }; 
 };
@@ -397,9 +399,12 @@ function equalsButton() {
         clearArr();
         c.push(totalAmount);        
         console.log(Number(totalAmount.toFixed(3)));
-        operationSymbolSub = '';         
+        operationSymbolSub = '';
     };
-    if((a !== '' && operationSymbolSub === 'multiply') /* || (a === '' && operationSymbolSub === 'multiply') */) {
+
+// Multiplication
+
+    if((a !== '' && operationSymbolSub === 'multiply') /* || (a === '' && operationSymbolSub === 'multiply') */) { // Unlike in + or -, x and ÷ need an extra logic for # + decimal
         //c.push(Number(o));
         c.push(Number(a));
         //console.log(operationSymbol);
@@ -407,14 +412,20 @@ function equalsButton() {
         clearArr();
         c.push(totalAmount);        
         console.log(Number(totalAmount.toFixed(2)));
+        operationSymbolSub = '';
     };
+    
     if((a === '' && operationSymbolSub === 'multiply' && turnOn === 'off')) { // attempting: creating a second logic for x with decimal RESULT: Working. NEED to test if still works when mixing operations
         c.push(Number(o));
         totalAmount = c.reduce((total, amount) => total * amount); // WO: .# x .# is yielding 0 and the opposite is working: e.g. .7 x 8 = 5.6
         clearArr();
         c.push(totalAmount);        
         console.log(Number(totalAmount.toFixed(2)));
+        operationSymbolSub = '';
     };
+
+// Division
+
     if((a !== '' && operationSymbolSub === 'divide')) {
         c.push(Number(a));        
         //console.log(operationSymbol);
@@ -456,6 +467,7 @@ function clearArr() {
     a = '';
     o = '';
     operationSymbol = '';
+    p = '';
     //console.log(a);
     //console.log(operationSymbol);
 }; 
