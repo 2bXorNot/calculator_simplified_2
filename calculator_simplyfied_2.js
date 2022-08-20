@@ -1,8 +1,10 @@
 console.log('test_2_');
 
-let a = '';
+
 let c = [];
 console.log(c);
+let a = '';
+console.log(a);
 let operationSymbol = '';
 let operationSymbolSub = '';
 let totalAmount;
@@ -13,204 +15,25 @@ let o = '';
 let turnOn = 'on';
 let decimalOnOff = ''
 
-let numberOne = '1';
-function numberOneButton() {
-    p = 'period2';
-    p3 = 'p32'    
-    //console.log(p);
-    if(p === 'period2' && turnOn === 'off') { // decimal has been added. turnOn === 'off' indicates periodButton has been clicked and the variable is off
-        o += numberOne // o is decimal before and after number(s)
-        console.log(o);
-        a = '';
-    };
-    if(p === 'period2' && turnOn === 'on') { // whole number. turnOn === 'on' indicates periodButton has NOT been clicked and the variable is on
-        a += numberOne;
-        console.log(a);
-    };
-    
-    if(p === 'period2' && turnOn === 'off' && a !== '') { // seems not to be working
-        o += numberOne;
-        a = '';
-    };
+function operacion(val) {
+    p = 'period2'; p3 = 'p32';
+    if(p === 'period2' && turnOn === 'off') {o += val; console.log(o); a = '';};
+    if(p === 'period2' && turnOn === 'on') { a += val; console.log(a);};
+    if(p === 'period2' && turnOn === 'off' && a !== '') {o += val; a = '';};
 };
-let numberTwo = '2';
-function numberTwoButton(){
-    p = 'period2';
-    p3 = 'p32'    
-    //console.log(p);
-    if(p === 'period2' && turnOn === 'off') {
-        o += numberTwo
-        console.log(o);
-        a = '';
-    };
-    if(p === 'period2' && turnOn === 'on') {
-        a += numberTwo
-        console.log(a);
-    };
-    if(p === 'period2' && turnOn === 'off' && a !== '') {
-        o += numberTwo;
-        a = '';
-    };
-};
-let numberThree = 3;
-function numberThreeButton(){
-    p = 'period2';
-    p3 = 'p32'    
-    //console.log(p);
-    if(p === 'period2' && turnOn === 'off') {
-        o += numberThree
-        a = '';
-        console.log(o);        
-    };
-    if(p === 'period2' && turnOn === 'on') {
-        a += numberThree
-        console.log(a);
-    };
-    if(p === 'period2' && turnOn === 'off' && a !== '') {
-        o += numberThree;
-        a = '';
-    };
-};
-let numberFour = 4;
-function numberFourButton(){
-    p = 'period2';
-    p3 = 'p32'    
-   //console.log(p);
-    if(p === 'period2' && turnOn === 'off') {
-        o += numberFour
-        a = '';
-        console.log(o);
-        
-    };
-    if(p === 'period2' && turnOn === 'on') {
-        a += numberFour
-        console.log(a);
-    };
-    if(p === 'period2' && turnOn === 'off' && a !== '') {
-        o += numberFour;
-        a = '';
-    };
-};
-let numberFive = 5;
-function numberFiveButton(){
-    p = 'period2';
-    p3 = 'p32'    
-    //console.log(p);
-    if(p === 'period2' && turnOn === 'off') {
-        o += numberFive
-        a = '';
-        console.log(o);
-        
-    };
-    if(p === 'period2' && turnOn === 'on') {
-        a += numberFive
-        console.log(a);
-    };
-    if(p === 'period2' && turnOn === 'off' && a !== '') {
-        o += numberFive;
-        a = '';
-    };
-};
-let numberSix = 6;
-function numberSixButton(){
-    p = 'period2';
-    p3 = 'p32'    
-    //console.log(p);
-    if(p === 'period2' && turnOn === 'off') {
-        o += numberSix
-        a = '';
-        console.log(o);
-        
-    };
-    if(p === 'period2' && turnOn === 'on') {
-        a += numberSix
-        console.log(a);
-    };
-    if(p === 'period2' && turnOn === 'off' && a !== '') {
-        o += numberSix;
-        a = '';
-    };
-};
-let numberSeven = 7;
-function numberSevenButton(){
-    p = 'period2';
-    p3 = 'p32'    
-    //console.log(p);
-    if(p === 'period2' && turnOn === 'off') {
-        o += numberSeven
-        a = '';
-        console.log(o);
-        
-    };
-    if(p === 'period2' && turnOn === 'on') {
-        a += numberSeven
-        console.log(a);
-    };
-    if(p === 'period2' && turnOn === 'off' && a !== '') {
-        o += numberSeven;
-        a = '';
-    };
-};
-let numberEight = 8;
-function numberEightButton(){
-    p = 'period2';
-    p3 = 'p32'    
-    //console.log(p);
-    if(p === 'period2' && turnOn === 'off') {
-        o += numberEight
-        a = '';
-        console.log(o);
-        
-    };
-    if(p === 'period2' && turnOn === 'on') {
-        a += numberEight
-        console.log(a);
-    };
-    if(p === 'period2' && turnOn === 'off' && a !== '') {
-        o += numberEight;
-        a = '';
-    };
-};
-let numberNine = 9;
-function numberNineButton(){
-    p = 'period2';
-    p3 = 'p32'    
-    //console.log(p);
-    if(p === 'period2' && turnOn === 'off') {
-        o += numberNine;
-        a = '';
-        console.log(o);
-        
-    };
-    if(p === 'period2' && turnOn === 'on') {
-        a += numberNine;
-        console.log(a);
-    };
-    if(p === 'period2' && turnOn === 'off' && a !== '') {
-        o += numberNine;
-        a = '';
-    };
-};
-let numberZero = 0;
-function numberZeroButton(){
-    p = 'period2';
-    p3 = 'p32'    
-    //console.log(p);
-    if(p === 'period2' && turnOn === 'off') {
-        o += numberZero;
-        a = '';
-        console.log(o);
-        
-    };
-    if(p === 'period2' && turnOn === 'on') {
-        a += numberZero;
-        console.log(a);
-    };
-    if(p === 'period2' && turnOn === 'off' && a !== '') {
-        o += numberZero;
-        //a = '';
-    };
-};
+
+//
+
+let numberOne = '1';function numberOneButton() {a = ''; operacion(numberOne);};
+let numberTwo = '2';function numberTwoButton(){a = '';operacion(numberTwo);};
+let numberThree = '3';function numberThreeButton(){a = '';operacion(numberThree);};
+let numberFour = '4';function numberFourButton(){a = '';operacion(numberFour);};
+let numberFive = '5';function numberFiveButton(){a = '';operacion(numberFive);};
+let numberSix = '6';function numberSixButton(){a = '';operacion(numberSix);};
+let numberSeven = '7';function numberSevenButton(){a = '';operacion(numberSeven);};
+let numberEight = '8';function numberEightButton(){a = '';operacion(numberEight);};
+let numberNine = '9';function numberNineButton(){a = '';operacion(numberNine);};
+let numberZero = '0';function numberZeroButton(){a = '';operacion(numberZero);}; 
 
 function addButton() {
     operationSymbol = '+';console.log(operationSymbol); operationSymbolSub = 'addition';
