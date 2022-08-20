@@ -1,6 +1,5 @@
 console.log('test_2_');
 
-
 let c = [];
 console.log(c);
 let a = '';
@@ -45,23 +44,10 @@ function addButton() {
         a = '';
         p = '';
         o = '';
-        //console.log(o);
         turnOn = 'on'; // turn has become on, so this means when a number is clicked, without pediodButton being click, a whole number is chosen
-        //console.log(turnOn);
     };
     
-    if(p === 'period2' && a === '' && turnOn === 'off') {                
-        c.push(Number(o)); // decimal before number is pushed into the array, because     
-        console.log(o);
-        a = '';
-        o = '';
-        turnOn = 'on';
-
-
-
-        //console.log(turnOn);
-        //console.log(decimal);
-    };
+    decimalPlusNumberCondition();
 
     if((a !== '' &&  operationSymbolSub === 'addition') || (a === '' &&  operationSymbolSub === 'addition') && turnOn === 'on' /* && if off, in to the next conditional */ ) { // a is not empty, thus it is pushed into c. Then a is cleared and operationSymbol is +
         //console.log(operationSymbolSub);
@@ -88,32 +74,19 @@ function subtractButton() {
         a = '';
         p = '';
         o = '';
-        //console.log(o);
         turnOn = 'on'; // turn has become on, so this means when a number is clicked, without pediodButton being click, a whole number is chosen
-        //console.log(turnOn);
     };
     
-    if(p === 'period2' && a === '' && turnOn === 'off') {
-        c.push(Number(o)); // decimal before number is pushed into the array, because             
-        console.log(o);
-        a = '';
-        o = '';
-        turnOn = 'on'
-        //console.log(turnOn);
-    };
+    decimalPlusNumberCondition();
 
     if((a !== '' &&  operationSymbolSub === 'minus') || (a === '' &&  operationSymbolSub === 'minus') && turnOn === 'on' /* && if off, in to the next conditional */ ) { // a is not empty, thus it is pushed into c. Then a is cleared and operationSymbol is +
-        //console.log(operationSymbolSub);
         c.push(Number(a));
         a = '';
-        //console.log(operationSymbol);
         if(a === '' && operationSymbol === '-' && turnOn === 'on') { // when equals clears a, a operationSymbol is chosen so it can do a process with the "number on the screen"
             totalAmount = c.reduce((total, amount) => total - amount);
             clearArr();
             c.push(totalAmount);
             console.log(Number(totalAmount.toFixed(3)));
-            //console.log(a);
-            //console.log(o);
         };
     }; 
 };
@@ -146,7 +119,6 @@ function multiplyButton() {
     };
     
     if(a !== '' &&  operationSymbolSub === 'multiply' && turnOn === 'on' /* && if off, in to the next conditional */ ) { // a is not empty, thus it is pushed into c. Then a is cleared and operationSymbol is +
-        //console.log(operationSymbolSub);
         c.push(Number(a));
         a = '';
         if(a === '' && operationSymbol === '*' && turnOn === 'on') { // when equals clears a, a operationSymbol is chosen so it can do a process with the "number on the screen"            
@@ -169,9 +141,7 @@ function divideButton() {
         a = '';
         p = '';
         o = '';
-        //console.log(o);
         turnOn = 'on'; // turn has become on, so this means when a number is clicked, without pediodButton being click, a whole number is chosen
-        //console.log(turnOn);
     };
     
     if(p === 'period2' && a === '' && turnOn === 'off') {
@@ -183,13 +153,10 @@ function divideButton() {
         console.log(Number(totalAmount.toFixed(2)));
         a = '';
         o = '';
-        turnOn = 'on'
-        //console.log(turnOn);
-        //console.log(decimal);
+        turnOn = 'on';
     };
 
     if(a !== '' &&  operationSymbolSub === 'divide' && turnOn === 'on' /* && if off, in to the next conditional */ ) { // a is not empty, thus it is pushed into c. Then a is cleared and operationSymbol is +
-        //console.log(operationSymbolSub);
         c.push(Number(a));
         a = '';
         //console.log(operationSymbol);
@@ -269,29 +236,22 @@ function equalsButton() {
 function periodButton() {
     console.log(decimal);
     p = 'period1';    
-    //console.log(p);
     turnOn = 'off';
     decimalOnOff = 'on';
-    //console.log(turnOn);
-    if(p === 'period1' && turnOn === 'off') { // decimal then number(s)
-        o = decimal; 
-        console.log(o);
-    };   
+    if(p === 'period1' && turnOn === 'off') { /* decimal then number(s)*/o = decimal; console.log(o);};   
         if(p === 'period1' && turnOn === 'off' && p3 === 'p32') { // number(s) then decimal. p3 === 'p32' is activated when the button of a number is pressed. a is a numner. a/number concatenated with '.'
         o = a + decimal;
         console.log(o);
         };
 };
 
+function decimalPlusNumberCondition() {if(p === 'period2' && a === '' && turnOn === 'off') {c.push(Number(o)); /* decimal before number is pushed into the array */console.log(o);a = '';o = '';turnOn = 'on'};};
+
 function clearArr() {
-    for(let i = c.length; i > 0; i--) {
-        c.shift();
-    };
+    for(let i = c.length; i > 0; i--) {c.shift();};
     a = '';
     o = '';
     operationSymbol = '';
     p = '';
-    //console.log(a);
-    //console.log(operationSymbol);
 }; 
 
